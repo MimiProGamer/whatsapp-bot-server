@@ -8,5 +8,6 @@
   "dependencies": {
     "express": "^4.18.2",
     "@open-wa/wa-automate": "^4.35.2"
+    "puppeteer": "^21.3.8"
   }
 }
