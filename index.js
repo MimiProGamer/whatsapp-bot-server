@@ -58,7 +58,7 @@ app.listen(PORT, () => {
 });
 
 // Bot starten
-create({ sessionId: "Web-sesh", detectOwnMessages: true, headless: true }).then(async (client) => {
+create({ sessionId: "Web-session", detectOwnMessages: true, headless: true }).then(async (client) => {
   client.onAnyMessage(async (message) => {
     if (!message.isGroupMsg || message.chat?.name !== 'BOT COMMS') return;
     const content = message.body.trim().toLowerCase();
