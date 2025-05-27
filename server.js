@@ -5,9 +5,9 @@ import fetch from 'node-fetch';
 
 // Leaderboard data (dummy)
 let leaderboard = [
-  { user: "Mika", balance: 120 },
-  { user: "Sven", balance: 95 },
-  { user: "Emma", balance: 150 }
+  { user: "Mika", balance: 0 },
+  { user: "Raaf", balance: 0 },
+  { user: "Soufian", balance: 0 }
 ];
 
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyBtgy_7EabcnNrTpk3jgRR7GwtCaHm5lcbjZ8HRbOMJF5WygsPvWywS4oH3KLNSPdIDA/exec";
