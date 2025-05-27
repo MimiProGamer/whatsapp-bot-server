@@ -58,7 +58,21 @@ app.listen(PORT, () => {
 });
 
 // Bot starten
-create({ sessionId: "Web-session", detectOwnMessages: true, headless: true }).then(async (client) => {
+create({
+  sessionId: "Web-session",
+  headless: true,
+  useChrome: true,
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--disable-accelerated-2d-canvas',
+    '--no-first-run',
+    '--no-zygote',
+    '--single-process',
+    '--disable-gpu'
+  ]
+}).then(async (client) => {
   client.onAnyMessage(async (message) => {
     if (!message.isGroupMsg || message.chat?.name !== 'BOT COMMS') return;
     const content = message.body.trim().toLowerCase();
